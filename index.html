@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<div class="left">
+			<div class="left__folders scroll">
+				<div class="force-overflow"></div>
+			</div>
+			<div class="left__create">
+				<div class="left__create-button">
+					<div class="left__create-overlay overlay"></div>
+					<img class="left__create-icon icon" src="img/icons/plus.svg" alt="Добавить папку">
+					<p class="left__create-text">Добавить папку</p>
+				</div>
+				<div class="left__creating">
+					<div class="left__creating-box">
+						<input type="text" class="left__creating-input" placeholder="Название папки">
+						<div class="left__creating-after input-after"></div>
+						<div class="left__creating-colors">
+							<input class="left__creating-color" id="inp-1" name="add__folder" type="radio">
+							<label for="inp-1" class="left__creating-radio"></label>
+							<input class="left__creating-color" id="inp-2" name="add__folder" type="radio">
+							<label for="inp-2" class="left__creating-radio"></label>
+							<input class="left__creating-color" id="inp-3" name="add__folder" type="radio">
+							<label for="inp-3" class="left__creating-radio"></label>
+							<input class="left__creating-color" id="inp-4" name="add__folder" type="radio">
+							<label for="inp-4" class="left__creating-radio"></label>
+							<input class="left__creating-color" id="inp-5" name="add__folder" type="radio">
+							<label for="inp-5" class="left__creating-radio"></label>
+							<input class="left__creating-color" id="inp-6" name="add__folder" type="radio">
+							<label for="inp-6" class="left__creating-radio"></label>
+							<input class="left__creating-color" id="inp-7" name="add__folder" type="radio">
+							<label for="inp-7" class="left__creating-radio"></label>
+							<input class="left__creating-color" id="inp-8" name="add__folder" type="radio">
+							<label for="inp-8" class="left__creating-radio"></label>
+						</div>
+						<button class="left__creating-button primary-button">Добавить</button>
+					</div>
+					<div class="left__creating-close"></div>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="right__header">
+				<p class="right__header-text">Покупки</p>
+			</div>
+			<div class="right__tasks scroll">
+				<div class="force-overflow"></div>
+			</div>
+			<div class="right__create">
+				<div class="right__create-button">
+					<div class="right__create-button-overlay overlay"></div>
+					<img class="right__create-icon icon" src="img/icons/plus.svg" alt="Добавить задачу">
+					<p class="right__create-text">Новая задача</p>
+				</div>
+				<div class="right__create-form">
+					<input class="right__create-input" type="text" placeholder="Текст задачи">
+					<div class="right__create-after input-after"></div>
+					<div class="right__create-buttons">
+						<button class="right__create-add primary-button">Добавить задачу</button>
+						<button class="right__create-cancel secondary-button">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/bundle.js"></script>
+</body>
+</html>

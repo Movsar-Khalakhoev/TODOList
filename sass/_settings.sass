@@ -1,0 +1,55 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	outline: none
+	user-select: none
+
+.container 
+	display: flex
+	justify-content: space-between
+	align-items: space-between
+	pl270
+.icon
+	width: 15px
+	height: 15px
+	fill: black
+
+button:active
+	transform: scale(0.97)
+
+.overlay
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 2
+
+.svg-overlay
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 3
+	border-radius: 100%
+
+
+
+.scroll
+	position: relative
+	overflow: auto
+	max-height: 60vh
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+		background-color: #F5F5F5
+
+	&::-webkit-scrollbar
+		width: 10px
+		background-color: #F5F5F5
+
+	&::-webkit-scrollbar-thumb
+		background-color: $contrast-1;
+		background-image: -webkit-linear-gradient(45deg,rgba(255, 255,255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)
+
+.force-overflow
+	min-height: 200px
+	position: absolute
+	right: 0

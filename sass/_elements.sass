@@ -1,0 +1,23 @@
+.primary-button
+	background-color: $contrast-1
+	border: none
+	border-radius: 4px
+	color: #ffffff
+	font-size: 14px
+	font-family: inherit
+	cursor: pointer
+	transition: $animation-speed linear
+	&:hover
+		background-color: darken($contrast-1, $blackout)
+
+.secondary-button
+	background-color: $secondary
+	border: none
+	border-radius: 4px
+	color: $textsecondary
+	font-size: 14px
+	letter-spacing: 0.15px
+	cursor: pointer
+	transition: $animation-speed linear
+	&:hover
+		background-color: darken($secondary, $blackout)

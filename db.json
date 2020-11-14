@@ -1,0 +1,30 @@
+{
+  "tasks": {
+    "folders": {
+      "folder0": {
+        "name": "asdfas",
+        "id": 0,
+        "circleColor": "#ff5600",
+        "tasks": [
+          "asdfasdfasdf"
+        ],
+        "performedTasksID": []
+      },
+      "folder1": {
+        "name": "asdfasdfasdf",
+        "id": 1,
+        "circleColor": "#a60000",
+        "tasks": [
+          "asdfasdfasdfsd",
+          "asdfasdfsadf",
+          "dfdf",
+          "df"
+        ],
+        "performedTasksID": [
+          2
+        ]
+      }
+    },
+    "activeFolder": "folder1"
+  }
+}

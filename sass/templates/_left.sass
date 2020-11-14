@@ -1,0 +1,239 @@
+.left
+	position: fixed
+	top: 0
+	height: 100vh
+	background-color: $secondary
+	padding-left: 20px
+	padding-top: 58px
+	padding-right: 20px
+	font-family: $robo
+	&__header
+		position: relative
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+		border-radius: 4px
+		width: 160px
+		height: 37px
+		&:hover
+			background-color: #fff
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05)
+			transition: $animation-speed linear
+		&-text
+			font-size: 14px
+			letter-spacing: 0.2px
+		&-icon
+			margin-right: 8px
+			margin-left: 10px
+	&__folders
+		max-height: calc( 100vh - 358px)
+	&__folder
+		position: relative
+		display: flex
+		align-items: center
+		border: none
+		background-color: transparent
+		font-family: inherit
+		width: 230px
+		min-height: 36px	
+		padding-right: 2px
+		border-radius: 4px
+		transition: opacity $animation-speed * 5 linear
+		&:hover, &-active
+			background-color: #fff
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05)
+			transition: $animation-speed linear
+		&:hover .left__folder-transform
+			visibility: visible
+			opacity: 1
+		&:hover .left__folder-text
+			overflow: hidden
+			width: 58%
+		&-overlay
+			position: absolute
+			width: 100%
+			height: 100%
+		&-circle
+			display: block
+			width: 15px
+			height: 15px
+			padding-right: 15px
+			background-color: #000
+			border-radius: 50%
+			margin-right: 10px
+			margin-left: 12px
+		&-text
+			font-size: 14px
+			letter-spacing: 0.15px
+			overflow: hidden
+			text-overflow: ellipsis
+		&-transform
+			display: flex
+			justify-content: space-between
+			position: absolute
+			right: 5px
+			width: 55px
+			height: 28px
+			min-width: 20px
+			opacity: 0
+			visibility: hidden
+			transition: all $animation-speed * 3
+		&-delete, &-edit
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			overflow: hidden
+			border: 1px solid transparent
+			height: 26px
+			width: 26px
+			cursor: pointer
+			transition:	$animation-speed
+			&:hover
+				background-color: $secondary
+			&-icon
+				fill:	$textsecondary
+				width: 14px
+				height: 14px
+		&-edit
+			border-color: $contrast-1
+		&-delete
+			border-color: $contrast-2
+		&-form
+			display: flex
+			align-items: center
+			width: 100%
+			height: 100%
+			padding: 0 1px
+			&-buttons
+				display: flex
+			&-active
+				opacity: 1
+			&-input
+				width: 70%
+				height: 32px
+				border-radius: 3px
+				padding-left: 5px
+				margin-left: 1px
+				font-family: inherit
+				font-size: 14px
+				border: 1px solid $secondary
+			&-save
+				width: 32px
+				height: 32px
+				margin: 0 3px
+			&-cancel
+				width: 32px
+				height: 32px
+				background-color: darken($secondary, $blackout)
+	&__create
+		&-button
+			display: flex
+			position: relative
+			align-items: center
+			width: 170px
+			height: 37px
+			margin-top: 20px
+			border-radius: 4px
+			transition: $animation-speed linear
+			&:hover
+				background-color: #fff
+				box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05)
+				transition: $animation-speed linear
+		&-icon
+			margin-left: 10px
+			margin-right: 10px
+		&-text
+			font-size: 14px
+			color: $textsecondary
+			letter-spacing: 0.15px
+	&__creating
+		position: absolute
+		display: none
+		width: 235px
+		height: 148px
+		margin-top: 10px
+		border-radius: 10px
+		background-color: #fff
+		font-family: $lato
+		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1)
+		transition: $animation-speed * 5 all
+		&-active
+			display: block
+		&-box
+			position: relative
+			width: 85%
+			margin: auto
+			padding-top: 18px
+		&-input
+			width: 100%
+			height: 32px
+			border: 1px solid $secondary
+			border-radius: 4px
+			padding-left: 11px
+			&::placeholder
+				color: $textsecondary
+				font-size: 14px
+				letter-spacing: 0.15px
+			&:focus + .left__creating-after
+				width: 100%
+			&:focus
+				border-bottom: none
+				border-bottom-radius: 0
+		&-after
+			position: absolute
+			height: 2px
+			width: 0
+			margin-top: -2px
+			z-index: 5
+			background-color: $contrast-1
+			transition: width $animation-speed * 3 linear
+		&-colors
+			display: flex
+			justify-content: space-around
+			margin-top: 13px
+		&-radio
+			position: relative
+			top: 1px
+			width: 20px
+			height: 20px
+			opacity: 0.4
+			border: 1px solid $secondary
+			border-radius: 100%
+			vertical-align: middle
+			cursor: pointer
+			background-color: $contrast-1
+			transition: all $animation-speed * 5
+		&-color
+			display: none
+			&:checked + .left__creating-radio
+				opacity: 1
+				animation: jelly $animation-speed * 5 ease forwards
+		&-button
+			width: 100%
+			height: 37px
+			margin-top: 17px
+		&-close
+			display: flex
+			align-items: center
+			justify-content: center
+			position: absolute
+			width: 20px
+			height: 20px
+			background-color: darken($secondary, $blackout * 3)
+			border-radius: 10px
+			top: -10px
+			right: -10px
+			cursor: pointer
+			&::before, &::after
+				position: absolute
+				content: ''
+				display: block
+				height: 2px
+				width: 12px
+				background-color: darken($secondary, $blackout * 9)
+			&::before
+				transform: rotate(45deg)
+			&::after
+				transform: rotate(-45deg)
